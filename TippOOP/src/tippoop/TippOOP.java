@@ -23,9 +23,10 @@ public class TippOOP {
         e.add(e4);
         e.add(e5);
         
-        Tipp t1 = new Tipp("a011","V");
+        Tipp t1 = new Tipp("a001","H");
         
-        t1.elso(e);
+        // t1.elso(e);
+        Jatek.elso(e, t1);
     }
     
 }
