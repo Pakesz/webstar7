@@ -53,9 +53,37 @@ public class Jatek {
         else{
             System.out.println("Gyöztes szelvény");
         }
-        
     }
     
-    
     // 3es és 4es
+    
+    public static void tettel(List<Eredmeny> eredmenyek, List<Tipp> tippek, int tet){
+        int gyoztesTipp = 0;
+        int vesztesTipp = 0;
+        double odds = 1.0;
+        
+        for(Eredmeny e: eredmenyek){
+            for(Tipp t: tippek){
+                if(e.getSorszam().equals(t.getSorszam())){
+                    if(e.getKimenetel().equals(t.getKimenetel())){
+                       gyoztesTipp ++;
+                       odds *= e.getOdds();
+                    }
+                    else{
+                        vesztesTipp ++;
+                    }
+                }
+            }
+        }
+        
+        if((gyoztesTipp+vesztesTipp) != tippek.size()){
+            System.out.println("Érvénytelen szelvény");
+        }
+        else if(vesztesTipp > 0){
+            System.out.println("Vesztes szelvény");
+        }
+        else{
+            System.out.println("Gyöztes szelvény, a megjátszott tét: "+ tet +" ft. Nyereményed: "+tet*odds+" ft.");
+        }
+    }
 }

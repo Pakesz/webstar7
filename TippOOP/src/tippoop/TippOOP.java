@@ -33,7 +33,9 @@ public class TippOOP {
         // t1.elso(e);
         //Jatek.elso(e, t1);
         
-        Jatek.tetNelkul(e, t);
+        //Jatek.tetNelkul(e, t);
+        
+        Jatek.tettel(e, t, 1000);
     }
     
 }
