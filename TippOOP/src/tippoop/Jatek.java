@@ -17,6 +17,7 @@ public class Jatek {
             }
             else{
                 szamlalo++;
+                System.out.println("Coinflict test");
             }
         }
         if(szamlalo == eredmenyek.size()){
